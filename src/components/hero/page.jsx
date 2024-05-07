@@ -1,5 +1,5 @@
 
-import arrow from "../../../public/Assets/arrow.png";
+import arrow2 from "../../../public/Assets/arrow2.svg";
 import Hand from "../../../public/Assets/hand_icon.png";
 import hero_image from "../../../public/Assets/hero_image.png";
 import Image from "next/image";
@@ -21,7 +21,7 @@ const Hero = () => {
         </p>
         <Button styles="mt-10 bg-secondary text-white flex"> 
         <p>latest Collection</p>
-        <Image src={arrow} alt="arrow" width={20} height={15} className="ml-2"/>
+        <Image src={arrow2} alt="arrow1" width={30} height={15} className="ml-2"/>
         </Button>
       </div>
       <div className={`${layout.sectionImg}`}>

@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-const ProductImages = ({ images}) => {
+const ProductImages = ({ images ,styles}) => {
   return (
-    <div>
+    <div className={styles}>
       {images.map((image, i) => (
-        <Image key={i} src={image} alt="image" />
+        <Image key={i} src={image} alt="image"  />
       ))}
     </div>
   );

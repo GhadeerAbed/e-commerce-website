@@ -7,14 +7,14 @@ import user from "../../../public/Assets/user.svg";
 import { navLinks } from "@/constant/shopper_data";
 import "../../app/globals.css";
 import styles from "../../styles/page";
-
-
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import useItemsCart from "../../hook/page";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [open , setOpen] = useState(false)
+  const {cartItems} = useItemsCart();
   return (
     <div className={`${styles.paddingX} ${styles.flexCenter} font-poppins`}>
       <div className={`${styles.boxWidth} `}>
@@ -44,7 +44,7 @@ const Navbar = () => {
             <button className='md:flex hidden py-2 px-8 font-medium text-[18px] border bg-transparent rounded-[20px] mx-6'>
                <a href="/login" >login</a>
               </button>
-            <Image src={cart_icon} alt="cart" width={32} h={32} />
+            <a href='/cart'><Image src={cart_icon} alt="cart" width={32} h={32} /></a>
             <span className="cart-count"><p className="ml-[4px] -mt-[2px]">0</p></span>
           </div>
           <div className="md:hidden flex flex-1 justify-end order-1 mr-6">
