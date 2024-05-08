@@ -1,4 +1,3 @@
-// ShopContext.js
 import React, { createContext, useState, useEffect } from "react";
 import all_product from "@/constant/all_product";
 
@@ -14,12 +13,19 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
-    const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
+    // Check if localStorage is available before accessing it
+    const storedCartItems =
+      typeof window !== "undefined"
+        ? JSON.parse(localStorage.getItem("cartItems"))
+        : null;
     return storedCartItems || getDefaultCart();
   });
 
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    // Check if localStorage is available before accessing it
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
   }, [cartItems]);
 
   const addToCart = (itemId) => {
@@ -43,16 +49,16 @@ const ShopContextProvider = ({ children }) => {
     }
     return totalAmount;
   };
-  
-   const getCartNumber = ()=>{
+
+  const getCartNumber = () => {
     let totalItems = 0;
-    for (const item in cartItems){
+    for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        totalItems += cartItems[item]
+        totalItems += cartItems[item];
       }
     }
     return totalItems;
-   }
+  };
 
   const ContextValue = {
     getTotalCartAmount,
@@ -60,7 +66,7 @@ const ShopContextProvider = ({ children }) => {
     cartItems,
     removeFromCart,
     addToCart,
-    getCartNumber
+    getCartNumber,
   };
 
   return (
