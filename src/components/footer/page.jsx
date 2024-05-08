@@ -22,9 +22,9 @@ const Footer = () => {
         <li className="hover:font-[500]"><a href="#">Content</a></li>
       </ul>
       <div className="flex  my-5 cursor-pointer">
-        <Image src={instagram} alt="instagram" />
-        <Image src={pintester_icon} alt="pintester_icon" className="mx-8" />
-        <Image src={whats_app} alt="whats_app" />
+        <a href="https://www.instagram.com/" target="_blank"><Image src={instagram} alt="instagram" /></a>
+        <a href="https://www.pinterest.com/" target="_blank"><Image src={pintester_icon} alt="pintester_icon" className="mx-8" /></a>
+        <a href="https://www.whatsapp.com/" target="_blank"><Image src={whats_app} alt="whats_app" /></a>
       </div>
       <div className="my-10   ">
         <hr className="ss:flex hidden h-[3px] bg-[#c7c7c7]  " />
