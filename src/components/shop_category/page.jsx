@@ -14,9 +14,9 @@ const ShopCategory = ({ img, category }) => {
           <p>
             <span className="font-bold">Showing 1-12</span> out of 36 products
           </p>
-          <div className="border border-[#ccc] rounded-[40px] px-3 py-1 flex xs:mt-0 mt-2">
+          <div className="border border-[#ccc] rounded-full px-3 py-1 xs:flex hidden text-[14px] items-center">
             Sort by
-            <Image src={arrow3} alt="dropdown_icon" width={20} height={2} />
+            <Image src={arrow3} alt="dropdown_icon" width={14} height={1} />
           </div>
         </div>
         <div className="flex flex-row flex-wrap mt-5 justify-center items-center xl:gap-8 gap-4">
