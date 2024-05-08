@@ -20,10 +20,12 @@ const Navbar = () => {
       <div className={`${styles.boxWidth} `}>
         <nav className=" w-full flex justify-between items-center py-6">
           <div className="flex flex-row justify-center items-center">
+           <a href="/shop" className="flex flex-row">
             <Image src={logo} alt="beauty-logo" width={36} h={36} />
             <h1 className={"font-poppins font-semibold text-[24px]"}>
               SHOPPER
             </h1>
+            </a> 
           </div>
           <ul className="md:flex hidden flex-row ">
             {navLinks?.map((navLink, i) => {
@@ -42,7 +44,7 @@ const Navbar = () => {
             })}
           </ul>
           <div className="flex flex-row justify-end items-center order-2">
-            <button className="md:flex hidden py-2 px-8 font-medium text-[18px] border bg-transparent rounded-[20px] mx-6 hover:text-[#ff4141]">
+            <button className="md:flex hidden py-2 px-8 font-medium text-[18px] border bg-transparent rounded-[20px] mx-6 hover:text-[#ff4141] hover:border-[#ff4141]">
               <a href="/login">login</a>
             </button>
             <a href="/cart">

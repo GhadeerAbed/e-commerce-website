@@ -19,7 +19,7 @@ const Hero = () => {
           Collections
           <br className="sm:block hidden" /> For Everyone
         </p>
-        <Button styles="mt-10 bg-secondary text-white flex"> 
+        <Button styles="mt-10 bg-secondary text-white font-bold flex hover:bg-[#febb46]"> 
         <p>latest Collection</p>
         <Image src={arrow2} alt="arrow1" width={30} height={15} className="ml-2"/>
         </Button>

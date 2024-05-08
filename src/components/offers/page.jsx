@@ -8,7 +8,7 @@ import {layout} from '@/styles/page'
 
 const Offer = () => {
   return (
-    <section className={` ${layout.section} max-w-[85%] flex m-auto offer md:px-20 px-3`}>
+    <section className={` ${layout.section}  flex m-auto offer md:px-20 px-3`}>
       <div className={`${layout.sectionInfo}`}>
         <h1 className={`${styles.heading1}`}>Exclusive</h1>
         <h2 className={`${styles.heading1} mt-1`}>Offer For You </h2>
