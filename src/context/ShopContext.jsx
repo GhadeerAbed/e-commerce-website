@@ -1,5 +1,5 @@
 // ShopContext.js
-import React, { createContext, useState ,useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import all_product from "@/constant/all_product";
 
 export const ShopContext = createContext();
@@ -31,7 +31,37 @@ const ShopContextProvider = ({ children }) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
-  const ContextValue = { all_product, cartItems, removeFromCart, addToCart };
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = all_product.find(
+          (product) => product.id === Number(item)
+        );
+        totalAmount += itemInfo.new_price * cartItems[item];
+      }
+    }
+    return totalAmount;
+  };
+  
+   const getCartNumber = ()=>{
+    let totalItems = 0;
+    for (const item in cartItems){
+      if (cartItems[item] > 0) {
+        totalItems += cartItems[item]
+      }
+    }
+    return totalItems;
+   }
+
+  const ContextValue = {
+    getTotalCartAmount,
+    all_product,
+    cartItems,
+    removeFromCart,
+    addToCart,
+    getCartNumber
+  };
 
   return (
     <ShopContext.Provider value={ContextValue}>{children}</ShopContext.Provider>

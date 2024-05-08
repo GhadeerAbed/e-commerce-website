@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
-import ShopContextProvider from '../context/ShopContext'
+import ShopContextProvider from "../context/ShopContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +17,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="w-full overflow-hidden">
-          <Navbar />
-          <ShopContextProvider>{children}</ShopContextProvider>
-          <Footer />
+          <ShopContextProvider>
+            <Navbar /> 
+            {children}
+            <Footer />
+          </ShopContextProvider>
         </div>
       </body>
     </html>

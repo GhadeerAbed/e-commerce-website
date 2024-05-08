@@ -9,7 +9,7 @@ const ShopCategory = ({ img, category }) => {
   return (
     <div className="sm:mx-16 mx-6">
       <Image src={img} alt="img" className="block w-[85%] " />
-      <div className="flex xs:flex-row  flex-col  justify-between xs:items-center items-start mt-7">
+      <div className="flex xs:flex-row  flex-col  justify-between xs:items-center items-start mt-12">
         <p>
           <span className="font-bold">Showing 1-12</span> out of 36 products
         </p>
@@ -24,7 +24,7 @@ const ShopCategory = ({ img, category }) => {
         })}
       </div>
       <div className="flex justify-center items-center ">
-        <Button styles="bg-[#ededed] text-[#787878] my-20 px-10 rounded-full font-[500]">
+        <Button styles="bg-[#ededed] text-[#787878] my-20 px-10 rounded-full font-[500] hover:text-[#ff4141] ">
           Explore more
         </Button>
       </div>

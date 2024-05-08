@@ -9,7 +9,7 @@ const RelatedProduct = () => {
       <h1 className={`${styles.heading2}`}>Related Product</h1>
       <hr className="w-[200px] h-[6px] bg-[#252525] rounded-[10px] "/>
       </div>
-      <div className="flex flex-row gap-8 mt-20 flex-wrap">
+      <div className="flex flex-row gap-8 justify-center items-center mt-20 flex-wrap">
         {data_product.map((item ,i) => (
           <Item
             key={i}

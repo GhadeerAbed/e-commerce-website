@@ -7,13 +7,7 @@ import all_product from "../../../constant/all_product";
 import RelatedProduct from "../../../components/related_product/page";
 import styles from "../../../styles/page";
 
-// const getDefaultCart = () => {
-//   const cart = {}; //create empty object to receive key=>cart[i] => product-id , value=> product-quantity
-//   for (let i = 0; i < all_product.length + 1; i++) {
-//     cart[i] = 0;
-//   }
-//   return cart;
-// };
+
 
 const Products = ({ params }) => {
   // const [cartItems, setCartItems] = useState(getDefaultCart());

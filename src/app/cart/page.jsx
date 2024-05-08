@@ -1,11 +1,13 @@
-import CartItems from '../../components/cart_items/page'
-
+import CartItems from "../../components/cart_items/page";
+import styles from "../../styles/page";
 const Cart = () => {
   return (
-    <div>
-        <CartItems/>
+    <div className={`${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
+        <CartItems />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

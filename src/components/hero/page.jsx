@@ -12,8 +12,8 @@ const Hero = () => {
       <div className={`${layout.sectionInfo}`}>
         <p className={`${styles.paragraph}`}>NEW ARRIVALS ONLY</p>
         <div className="flex">
-          <p className={`${styles.heading1} mr-2`}>new</p>
-          <Image src={Hand} alt="hello" height={40} width={40} />
+          <p className={`${styles.heading1} `}>new</p>
+          <Image src={Hand} alt="hello" height={45} width={40} className="mx-5"/>
         </div>
         <p className={`${styles.heading1}`}>
           Collections

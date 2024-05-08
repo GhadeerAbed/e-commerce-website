@@ -1,6 +1,6 @@
 import p1_img from '../../public/Assets/product_1.png'
 import p2_img from '../../public/Assets/product_2.png'
-import p3_img from '../../public/Assets/product_3.png'
+import p12_img from '../../public/Assets/product_12.png'
 import p4_img from '../../public/Assets/product_4.png'
 
 let data_product = [
@@ -19,7 +19,7 @@ let data_product = [
   },
   {id:3,
     name:"Striped Flutter Sleeve ",
-    image:p3_img,
+    image:p12_img,
     new_price:60.00,
     old_price:100.50,
   },
