@@ -10,6 +10,7 @@ import styles from "../../styles/page";
 import { usePathname } from "next/navigation";
 import { useContext, useState } from "react";
 import { ShopContext } from "@/context/ShopContext";
+import Link from "next/link";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -20,38 +21,38 @@ const Navbar = () => {
       <div className={`${styles.boxWidth} `}>
         <nav className=" w-full flex justify-between items-center py-6">
           <div className="flex flex-row justify-center items-center">
-           <a href="/shop" className="flex flex-row">
-            <Image src={logo} alt="beauty-logo" width={36} h={36} />
-            <h1 className={"font-poppins font-semibold text-[24px]"}>
-              SHOPPER
-            </h1>
-            </a> 
+            <Link href="/shop" className="flex flex-row">
+              <Image src={logo} alt="beauty-logo" width={36} h={36} />
+              <h1 className={"font-poppins font-semibold text-[24px]"}>
+                SHOPPER
+              </h1>
+            </Link>
           </div>
           <ul className="md:flex hidden flex-row ">
             {navLinks?.map((navLink, i) => {
               const isActive = pathname.startsWith(navLink.href);
               return (
-                <>
-                  <li
-                    key={navLink.id}
-                    className={`${i === navLink.length - 1 ? "mr-0" : "mr-10"} 
+                <li
+                  key={navLink.id}
+                  className={`${i === navLink.length - 1 ? "mr-0" : "mr-10"} 
                 ${isActive ? "border-active " : "a-hover"}`}
-                  >
-                    <a href={`${navLink.href} `}>{navLink.title}</a>
-                  </li>
-                </>
+                >
+                  <Link href={`${navLink.href} `}>{navLink.title}</Link>
+                </li>
               );
             })}
           </ul>
           <div className="flex flex-row justify-end items-center order-2">
             <button className="md:flex hidden py-2 px-8 font-medium text-[18px] border bg-transparent rounded-[20px] mx-6 hover:text-[#ff4141] hover:border-[#ff4141]">
-              <a href="/login">login</a>
+              <Link href="/login">login</Link>
             </button>
-            <a href="/cart">
+            <Link href="/cart">
               <Image src={cart_icon} alt="cart" width={32} h={32} />
-            </a>
+            </Link>
             <span className="cart-count">
-              <p className="ml-[4px] -mt-[2px] text-[15px]">{getCartNumber()}</p>
+              <p className="ml-[4px] -mt-[2px] text-[15px]">
+                {getCartNumber()}
+              </p>
             </span>
           </div>
           <div className="md:hidden flex flex-1 justify-end order-1 mr-6">
@@ -74,14 +75,12 @@ const Navbar = () => {
               <ul className="flex flex-col justify-center py-5 px-7 items-center bg-white border-none rounded-sm  ">
                 {navLinks?.map((navLink, i) => {
                   return (
-                    <>
-                      <li
-                        key={navLink.id}
-                        className="font-normal text-[16px] mb-5  hover:bg-blue-10 hover:text-[#ff4141]"
-                      >
-                        <a href={`${navLink.href} `}>{navLink.title}</a>
-                      </li>
-                    </>
+                    <li
+                      key={navLink.id}
+                      className="font-normal text-[16px] mb-5  hover:bg-blue-10 hover:text-[#ff4141]"
+                    >
+                      <Link href={`${navLink.href} `}>{navLink.title}</Link>
+                    </li>
                   );
                 })}
               </ul>
