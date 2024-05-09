@@ -14,10 +14,7 @@ const getDefaultCart = () => {
 const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     // Check if localStorage is available before accessing it
-    const storedCartItems =
-      typeof window !== "undefined"
-        ? JSON.parse(localStorage.getItem("cartItems"))
-        : null;
+    const storedCartItems =typeof window !== "undefined"? JSON.parse(localStorage.getItem("cartItems")): null;
     return storedCartItems || getDefaultCart();
   });
 

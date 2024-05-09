@@ -8,14 +8,16 @@ import { navLinks } from "@/constant/shopper_data";
 import "../../app/globals.css";
 import styles from "../../styles/page";
 import { usePathname } from "next/navigation";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "@/context/ShopContext";
 import Link from "next/link";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
   const { getCartNumber } = useContext(ShopContext);
+
   return (
     <div className={`${styles.paddingX} ${styles.flexCenter} font-poppins`}>
       <div className={`${styles.boxWidth} `}>

@@ -14,11 +14,21 @@ const NewLetters = () => {
         <p className={`{${styles.paragraph} mt-2`}>
           Subscribe to our new letters and stay update
         </p>
-        <div className="flex flex-1 sm:flex-row flex-col  mt-10 flex-wrap ">
+        {/* <div className="flex flex-1 sm:flex-row flex-col  mt-10 flex-wrap ">
           <input type="email" placeholder="Enter your Email" 
           className="bg-white border rounded-full pl-2 py-3  ss:w-[450px] w-[100%]   " />
           <Button  styles="bg-black text-white py-3 w-[152px] font-normal max-[830px]:ml-0 -ml-8 rounded-full outline-none max-[820px]:mt-5 mt-0" ><p className="pl-2">subscribe</p></Button>
-        </div>
+        </div> */}
+          <div className="h-[58px] bg-[#fff] mt-20 flex flex-row font-poppies flex-wrap border rounded-[5px]">
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              className="border-2 outline-none w-[335px] h-full bg-transparent pl-2"
+            />
+            <button className="w-[160px] h-full bg-black text-white cursor-pointer text-[18px] max-[538px]:mt-3 mt-0">
+            subscribe
+            </button>
+          </div>
       </div>
     </div>
   );

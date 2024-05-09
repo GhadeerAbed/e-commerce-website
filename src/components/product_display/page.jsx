@@ -14,9 +14,6 @@ const ProductDisplay = ({ product }) => {
   const {cartItems}= useContext(ShopContext);
 
 
-  useEffect(() => {
-    console.log(cartItems); // Log the state after it's updated
-  }, [cartItems]);
 
   const sizes = ["S", "M", "L", "XL", "XXL"];
 
