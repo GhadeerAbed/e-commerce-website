@@ -72,7 +72,7 @@ const Navbar = () => {
             <div
               className={`${
                 open ? "flex" : "hidden"
-              } card absolute right-0 top-20 max-w-[140px] mx-5 -mt-2 rounded-xl `}
+              } shadow-xl  border  border-[#ddd] absolute right-0 top-20 max-w-[140px] mx-5 -mt-2 rounded-xl `}
             >
               <ul className="flex flex-col justify-center py-5 px-7 items-center bg-white border-none rounded-sm  ">
                 {navLinks?.map((navLink, i) => {

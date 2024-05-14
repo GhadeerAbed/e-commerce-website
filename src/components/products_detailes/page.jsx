@@ -6,14 +6,15 @@ const ProductDetails = ({ product }) => {
   return (
     <div className={`${styles.paddingX} flex xs:flex-row flex-col  text-[#5e5e5e] font-[500] `}>
       <div className="flex">
-        home
-        <Image src={arrow1} alt="icon" width={15} height={1} />
-        shop <Image src={arrow1} alt="icon" width={15} height={1} />
+        <span className="pr-1">Home</span> 
+        <Image src={arrow1} alt="icon" width={9} height={9} />
+        <span className="px-1">Shop</span> 
+        <Image src={arrow1} alt="icon" width={9} height={9} />
       </div>
-      <div className="flex">
-        {product.category}{" "}
-        <Image src={arrow1} alt="icon" width={15} height={1} />
-        {product.name}
+      <div className="flex capitalize">
+      <span className="px-1">{product.category}</span>
+        <Image src={arrow1} alt="icon" width={9} height={9} />
+        <span className="px-1">{product.name}</span>
       </div>
     </div>
   );
